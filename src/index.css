@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 35 100% 98%;
+    --foreground: 0 5% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 5% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 5% 10%;
+
+    --primary: 4 90% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 25 95% 53%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 35 20% 95%;
+    --muted-foreground: 0 5% 45%;
+
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 5% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 15% 88%;
+    --input: 35 15% 88%;
+    --ring: 4 90% 58%;
+
+    --radius: 1rem;
+
+    /* Custom food-themed tokens */
+    --gradient-spicy: linear-gradient(135deg, hsl(4 90% 58%), hsl(25 95% 53%));
+    --gradient-warm: linear-gradient(180deg, hsl(35 100% 98%), hsl(35 60% 95%));
+    --shadow-food: 0 4px 20px -2px hsl(4 90% 58% / 0.15);
+    --shadow-card: 0 10px 40px -10px hsl(0 5% 10% / 0.1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 0 5% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 5% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 5% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 4 90% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 25 95% 53%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 5% 20%;
+    --muted-foreground: 0 5% 65%;
+
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 5% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 5% 20%;
+    --input: 0 5% 20%;
+    --ring: 4 90% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
